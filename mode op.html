@@ -1,0 +1,391 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mode d’emploi — Renome X</title>
+    <link rel="icon" type="image/png" href="/assets/can-kpi.png">
+    <style>
+        :root {
+            /* Night blue clair */
+            --bg: #0f1f3d;
+            --bg-2: #122750;
+            --card: #0f1e37;
+            --line: #243d6b;
+            --text: #eaf1ff;
+            --muted: #b9c7e3;
+            --accent: #22c55e;
+            --accent-2: #16a34a;
+            --amber: #f59e0b;
+            --orange: #ff7a00;
+            --orange-2: #ff6a00;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+            color: var(--text);
+            background: radial-gradient(1200px 600px at 10% -10%, rgba(255,122,0,.10), transparent), radial-gradient(900px 500px at 95% -5%, rgba(56,189,248,.10), transparent), linear-gradient(180deg, var(--bg), var(--bg-2));
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 32px auto;
+            padding: 0 18px
+        }
+
+        /* header / shortcuts */
+        .title {
+            font-size: 28px;
+            letter-spacing: .3px;
+            margin: 0 0 6px
+        }
+
+        .sub {
+            color: var(--muted);
+            margin: 0 0 14px
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(12,1fr)
+        }
+
+        .card {
+            grid-column: span 12;
+            background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.28);
+            backdrop-filter: blur(3px);
+        }
+
+            .card h3 {
+                margin: 0 0 8px;
+                font-size: 18px
+            }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        .pill {
+            display: inline-block;
+            font-size: 12px;
+            padding: 3px 8px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            margin-right: 6px;
+            color: #d8e4ff;
+            background: #0b152b;
+        }
+
+        .kbd {
+            display: inline-block;
+            background: #0b152b;
+            border: 1px solid var(--line);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 12px
+        }
+
+        .steps {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3,1fr)
+        }
+
+        .step {
+            border: 1px dashed var(--line);
+            border-radius: 14px;
+            padding: 12px;
+            background: rgba(10,20,45,.6)
+        }
+
+        .ok {
+            color: #86efac
+        }
+
+        .warn {
+            color: #fbbf24
+        }
+
+        .err {
+            color: #f87171
+        }
+
+        .list {
+            margin: 8px 0 0 0;
+            padding-left: 18px
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #0b152b;
+            border: 1px solid var(--line);
+            margin-right: 6px
+        }
+
+        .mono {
+            font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace
+        }
+
+        .cta {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            background: #0b152b;
+            border: 1px solid var(--line);
+            color: var(--text);
+            padding: 10px 14px;
+            border-radius: 12px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .15s border-color;
+        }
+
+            .btn:hover {
+                border-color: #375a95
+            }
+
+            .btn.acc {
+                background: var(--orange);
+                color: #2b0e00;
+                border-color: var(--orange-2);
+                font-weight: 700;
+                box-shadow: 0 10px 26px rgba(255,122,0,.22)
+            }
+
+            .btn.green {
+                background: var(--accent);
+                color: #06220f;
+                border-color: var(--accent-2);
+                font-weight: 700
+            }
+
+            .btn.line {
+                border-style: dashed
+            }
+
+        .code {
+            background: #0b152b;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 12px;
+            white-space: pre-wrap
+        }
+
+        @media (max-width:900px) {
+            .steps {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="title">Mode d’emploi — Renommage & Création</h1>
+        <p class="sub">Tout ce qu’il faut pour aller vite, sans se tromper.</p>
+
+        <!-- Raccourcis -->
+        <div class="grid">
+  <section class="card">
+    <h3>Raccourcis utiles</h3>
+
+    <nav class="cta" aria-label="Raccourcis">
+      <a class="btn"
+         href="C:\Users\dagenin\OneDrive - circet.fr\KPI can Orange - Documents\test\Nomination Fichier\nomination.html"
+         title="Retour à l’index local">⬅︎ Retour à l’index</a>
+
+      <a class="btn acc" href="#presets" title="Voir les presets conseillés">Presets conseillés</a>
+      <a class="btn" href="#tokens" title="Liste des jetons disponibles">Jetons disponibles</a>
+      <a class="btn" href="#rename" title="Aller à la section Renommer">Renommer</a>
+      <a class="btn" href="#create" title="Aller à la section Créer">Créer</a>
+      <a class="btn" href="#faq" title="Aller au dépannage">Dépannage</a>
+    </nav>
+  </section>
+</div>
+
+
+        <!-- Démarrage -->
+        <div class="grid">
+            <div class="card">
+                <h3>1) Démarrage rapide</h3>
+                <div class="steps">
+                    <div class="step">
+                        <b>Choisir un dossier</b>
+                        <ul class="list">
+                            <li>Chrome/Edge recommandé. Certains dossiers système Windows sont refusés.</li>
+                            <li>Tu dois avoir l’écriture dans ce dossier.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <b>Choisir un mode</b>
+                        <ul class="list">
+                            <li>
+                                <span class="pill">KPI factu</span>
+                                <span class="pill">Attachements</span>
+                                <span class="pill">Prod 8</span>
+                                <span class="pill">LOT</span>
+                                <span class="pill">Tout le dossier (libre)</span>
+                            </li>
+                            <li>Tu peux enregistrer tes propres <i>modes</i>.</li>
+                        </ul>
+                    </div>
+                    <div class="step">
+                        <b>Aperçu puis Renommer</b>
+                        <ul class="list">
+                            <li><b>Aperçu</b> montre exactement les nouveaux noms.</li>
+                            <li><b>Renommer</b> applique. <span class="kbd">Undo</span> disponible.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Presets -->
+        <div id="presets" class="grid">
+            <div class="card">
+                <h3>2) Presets conseillés</h3>
+                <p class="muted">Chaque preset remplit mode, patron, extensions, heure, mapping.</p>
+                <ul class="list">
+                    <li><b>KPI AURA</b> — <span class="mono">_KPI factu AURA {DATE:dd.MM}</span> (.csv)</li>
+                    <li><b>Attachements 6 régions</b> — <span class="mono">export_attachements{LABEL}{DATE:ddMM}</span> (.csv) + mapping 1..6</li>
+                    <li><b>Prod 8 régions 12h</b> — <span class="mono">Avancement prod {REGION} {DATE:dd.MM} {HOUR}h</span> (.xlsx, H=12)</li>
+                    <li><b>Prod 63/74 décalage</b> — <span class="mono">Avancement prod {NUM} {DATE:dd.MM} {HOUR}h</span> (détecte 63/74)</li>
+                    <li><b>LOT FLASH Semaine</b> — <span class="mono">LOT {LOT} {REGION} S{WEEK}</span> (.xlsm)</li>
+                    <li><b>Créer 6 régions</b> — <span class="mono">Avancement prod {NAME} {DATE:dd.MM}</span> + liste AURA…PRM</li>
+                </ul>
+                <p class="muted">Dans l’appli, clique les boutons “Presets 1-clic”.</p>
+            </div>
+        </div>
+
+        <!-- Jetons -->
+        <div id="tokens" class="grid">
+            <div class="card">
+                <h3>3) Jetons rapides</h3>
+                <div>
+                    <span class="badge mono">{DATE:dd.MM}</span>
+                    <span class="badge mono">{DATE:ddMM}</span>
+                    <span class="badge mono">{WEEK}</span>
+                    <span class="badge mono">{INDEX}</span>
+                    <span class="badge mono">{INDEX:3}</span>
+                    <span class="badge mono">{LABEL}</span>
+                    <span class="badge mono">{REGION}</span>
+                    <span class="badge mono">{HOUR}</span>
+                    <span class="badge mono">{LOT}</span>
+                    <span class="badge mono">{NUM}</span>
+                    <span class="badge mono">{NAME}</span>
+                    <span class="badge mono">{EXT}</span>
+                </div>
+                <p class="muted">Le mapping <b>Index→Libellé</b> nourrit <code>{LABEL}</code>. En LOT, si un numéro de LOT est détecté, il est prioritaire.</p>
+            </div>
+        </div>
+
+        <!-- Renommer -->
+        <div id="rename" class="grid">
+            <div class="card">
+                <h3>4) Renommer</h3>
+                <ol class="list">
+                    <li>Sélectionne le <b>dossier</b>.</li>
+                    <li>Choisis le <b>mode</b> (dont “<b>Tout le dossier (libre)</b>”).</li>
+                    <li>Règle <b>Heure</b> (auto/12 h), <b>Date</b>, <b>Extensions</b>.</li>
+                    <li>Complète la <b>table Index→Libellé</b> si tu utilises <code>{LABEL}</code>.</li>
+                    <li>Clique <b>Aperçu</b> → vérifie les colonnes.</li>
+                    <li>Clique <b>Renommer</b>. Conflits → suffixes “-1, -2…”.</li>
+                    <li>Besoin de revenir ? <b>Annuler (Undo)</b>.</li>
+                </ol>
+                <p class="muted"><b>Prod 8</b> : l’heure est retirée pour CVL/DOE/IDF/PRM. <b>Attachements</b> : ordre par mapping si défini, sinon AURA→PRM.</p>
+            </div>
+        </div>
+
+        <!-- Créer -->
+        <div id="create" class="grid">
+            <div class="card">
+                <h3>5) Créer des fichiers</h3>
+                <div class="steps">
+                    <div class="step">
+                        <b>Avec liste</b>
+                        <p>Patron : <span class="mono">Avancement prod {NAME} {DATE:dd.MM}</span></p>
+                        <div class="code">
+                            AURA
+                            Corse
+                            CVL
+                            DOE
+                            IDF
+                            PRM
+                        </div>
+                    </div>
+                    <div class="step">
+                        <b>Sans liste</b>
+                        <p>Patron : <span class="mono">Lot {INDEX} fichier</span>, Quantité=3</p>
+                        <p>Résultat : Lot 1/2/3 fichier</p>
+                    </div>
+                    <div class="step">
+                        <b>Sécurité</b>
+                        <ul class="list">
+                            <li><span class="ok">✅ prêt</span> si libre</li>
+                            <li><span class="warn">⚠️ existe déjà</span> si conflit</li>
+                            <li><span class="err">❌ nom vide</span> si patron ne produit rien</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="muted">L’aperçu création n’écrit rien. “Créer” dépose des fichiers vides.</p>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq" class="grid">
+            <div class="card">
+                <h3>6) Dépannage</h3>
+                <ul class="list">
+                    <li><b>Je vois juste “.csv/.xlsm”.</b> → ton patron ne produit rien (ex. <code>{LABEL}</code> vide). Remplis la table, change Index départ, ou ajoute <code>{NAME}</code>/<code>{INDEX}</code>.</li>
+                    <li><b>Impossible d’ouvrir le dossier.</b> → Choisis un dossier utilisateur (Bureau/Documents), pas un dossier système.</li>
+                    <li><b>Mauvaise heure.</b> → force l’heure via “Heure cible (24 h)”.</li>
+                    <li><b>Conflits de noms.</b> → suffixes automatiques “-1”, “-2”…</li>
+                    <li><b>Mes modes persos ont disparu.</b> → localStorage du navigateur ; si tu changes de profil/PC, il faut les recréer.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tips -->
+        <div class="grid">
+            <div class="card">
+                <h3>7) Tips pro</h3>
+                <ul class="list">
+                    <li>Enregistre tes combinaisons en <b>modes personnalisés</b> (nom lisible).</li>
+                    <li>Les presets 1-clic te font gagner 80% du temps ; ajuste seulement l’exception.</li>
+                    <li>Pour les attachements, la table <b>Index→Libellé</b> impose ton ordre (remplace AURA→PRM).</li>
+                    <li>En LOT, mapping par numéro de LOT en priorité (si détecté).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="grid">
+            <div class="card" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+                <div class="muted">Besoin d’un raccourci ?</div>
+                <div class="cta">
+                    <a class="btn" href="/index.html">⬅︎ Retour à l’index</a>
+                    <a class="btn green" href="/apps/renamer.html">Ouvrir l’outil</a>
+                    <a class="btn acc" href="/docs/aide.html">Aide</a>
+                    <a class="btn line" href="/docs/landing.html" target="_blank">Landing page</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
